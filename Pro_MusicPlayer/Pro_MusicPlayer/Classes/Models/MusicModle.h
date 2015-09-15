@@ -16,6 +16,6 @@
 @property(nonatomic,strong)NSString *blurPicUrl;
 @property(nonatomic,strong)NSString *album;
 @property(nonatomic,strong)NSString *singer;
-@property(nonatomic,assign)NSInteger duration;
+@property(nonatomic,strong)NSString * duration;
 @property(nonatomic,strong)NSString *artists_name;
 @end

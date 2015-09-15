@@ -35,6 +35,8 @@
 		C24963C51BA6A6F600C87E22 /* MusicitemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C24963C31BA6A6F600C87E22 /* MusicitemCell.m */; };
 		C24963C61BA6A6F600C87E22 /* MusicitemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C24963C41BA6A6F600C87E22 /* MusicitemCell.xib */; };
 		C24963C91BA6B1D300C87E22 /* MusicModle.m in Sources */ = {isa = PBXBuildFile; fileRef = C24963C81BA6B1D300C87E22 /* MusicModle.m */; };
+		C2CFC9DC1BA7EC9C001697C2 /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CFC9DB1BA7EC9C001697C2 /* AudioPlayer.m */; };
+		C2CFC9DF1BA80A21001697C2 /* MusicPlayingController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CFC9DE1BA80A21001697C2 /* MusicPlayingController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +107,10 @@
 		C24963C71BA6B1D300C87E22 /* MusicModle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicModle.h; sourceTree = "<group>"; };
 		C24963C81BA6B1D300C87E22 /* MusicModle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicModle.m; sourceTree = "<group>"; };
 		C24963CA1BA6B22000C87E22 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		C2CFC9DA1BA7EC9C001697C2 /* AudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayer.h; sourceTree = "<group>"; };
+		C2CFC9DB1BA7EC9C001697C2 /* AudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayer.m; sourceTree = "<group>"; };
+		C2CFC9DD1BA80A21001697C2 /* MusicPlayingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicPlayingController.h; sourceTree = "<group>"; };
+		C2CFC9DE1BA80A21001697C2 /* MusicPlayingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicPlayingController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +246,8 @@
 			children = (
 				C24963B91BA6A48600C87E22 /* MusicListHelper.h */,
 				C24963BA1BA6A48600C87E22 /* MusicListHelper.m */,
+				C2CFC9DA1BA7EC9C001697C2 /* AudioPlayer.h */,
+				C2CFC9DB1BA7EC9C001697C2 /* AudioPlayer.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -275,6 +283,8 @@
 			children = (
 				C24963BF1BA6A6CA00C87E22 /* MusicListController.h */,
 				C24963C01BA6A6CA00C87E22 /* MusicListController.m */,
+				C2CFC9DD1BA80A21001697C2 /* MusicPlayingController.h */,
+				C2CFC9DE1BA80A21001697C2 /* MusicPlayingController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -452,10 +462,12 @@
 				C24963B41BA6A3B600C87E22 /* UIImageView+HighlightedWebCache.m in Sources */,
 				C24963A81BA6A3B600C87E22 /* NSData+ImageContentType.m in Sources */,
 				C24963C11BA6A6CA00C87E22 /* MusicListController.m in Sources */,
+				C2CFC9DF1BA80A21001697C2 /* MusicPlayingController.m in Sources */,
 				C24963AE1BA6A3B600C87E22 /* SDWebImageManager.m in Sources */,
 				C24963AC1BA6A3B600C87E22 /* SDWebImageDownloader.m in Sources */,
 				C24963B31BA6A3B600C87E22 /* UIImage+WebP.m in Sources */,
 				C24963C51BA6A6F600C87E22 /* MusicitemCell.m in Sources */,
+				C2CFC9DC1BA7EC9C001697C2 /* AudioPlayer.m in Sources */,
 				C24963B61BA6A3B600C87E22 /* UIView+WebCacheOperation.m in Sources */,
 				C24963A91BA6A3B600C87E22 /* SDImageCache.m in Sources */,
 				C249635D1BA6A13100C87E22 /* ViewController.m in Sources */,
@@ -668,6 +680,7 @@
 				C24963761BA6A13100C87E22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C24963771BA6A13100C87E22 /* Build configuration list for PBXNativeTarget "Pro_MusicPlayerTests" */ = {
 			isa = XCConfigurationList;
@@ -676,6 +689,7 @@
 				C24963791BA6A13100C87E22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

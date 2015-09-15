@@ -10,9 +10,11 @@
 #import "MusicItemCell.h"
 #import "MusicListHelper.h"
 #import "MusicModle.h"
+#import "MusicPlayingController.h"
 
 @interface MusicListController ()
-
+//因为播放页面一直存在,所以做成一个属性直接放在列表页面
+@property(nonatomic,strong)MusicPlayingController *playingController;
 @end
 
 @implementation MusicListController
@@ -64,6 +66,32 @@
     
     
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+     //这个就是将播放页面显示出来
+    self.playingController.index = indexPath.row;
+    [self showDetailViewController:self.playingController sender:nil];
+
+
+}
+
+- (IBAction)show4playVC:(id)sender {
+    
+    [self showDetailViewController:self.playingController sender:nil];
+    
+    
+}
+
+
+- (MusicPlayingController *)playingController{
+
+
+    if (_playingController == nil) {
+        _playingController = [MusicPlayingController new];
+    }
+    return _playingController;
+
 }
 
 
