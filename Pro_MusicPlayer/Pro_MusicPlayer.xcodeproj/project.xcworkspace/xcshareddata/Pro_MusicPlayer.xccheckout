@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>502B9FF2-0659-448C-9B9F-97ED24600546</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Pro_MusicPlayer</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D7F37F219E1DC16ADCAC32A438FCE8402F149771</key>
+		<string>https://github.com/Injude/Pro_MusicPlayer.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Pro_MusicPlayer/Pro_MusicPlayer.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D7F37F219E1DC16ADCAC32A438FCE8402F149771</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Injude/Pro_MusicPlayer.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D7F37F219E1DC16ADCAC32A438FCE8402F149771</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D7F37F219E1DC16ADCAC32A438FCE8402F149771</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Pro_MusicPlayer</string>
+		</dict>
+	</array>
+</dict>
+</plist>
