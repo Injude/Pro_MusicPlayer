@@ -12,6 +12,7 @@
 #import "UIImageView+WebCache.h"
 #import "AudioPlayer.h"
 @interface MusicPlayingController ()<AudioPlayerDelegate>
+@property (weak, nonatomic) IBOutlet UINavigationBar *navebar;
 
 //当前播放音乐的模型
 @property(nonatomic,strong)MusicModle *currentModel;
@@ -150,6 +151,11 @@
 #pragma mark -私有方法
 -(void )updateUI{
 
+    
+    for (UINavigationItem *item in self.navebar.items) {
+        item.title = self.currentModel.name;
+    }
+    
   //如果换个的话,就让图片重新归位
     self.img4Musicpic.transform  = CGAffineTransformMakeRotation(0);
   //可以根据获取到当前播放的音乐model 更新UI
