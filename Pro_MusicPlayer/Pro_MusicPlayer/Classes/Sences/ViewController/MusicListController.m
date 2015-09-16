@@ -11,10 +11,13 @@
 #import "MusicListHelper.h"
 #import "MusicModle.h"
 #import "MusicPlayingController.h"
+#import "URLs.h"
+#import "MBProgressHUD.h"
 
-@interface MusicListController ()
+@interface MusicListController ()<UIWebViewDelegate>
 //因为播放页面一直存在,所以做成一个属性直接放在列表页面
 @property(nonatomic,strong)MusicPlayingController *playingController;
+
 @end
 
 @implementation MusicListController
@@ -23,16 +26,30 @@
     [super viewDidLoad];
     
     
+    
+    
+    
     self.title=@"奈文摩尔";
     [self.tableView registerNib:[UINib nibWithNibName:@"MusicitemCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     
     
     [[MusicListHelper shareHelper]requstAllWithMusic:^{
         [self.tableView reloadData];
+        
+        
     }];
     
     
 }
+
+-(void)loadHUD{
+
+    MBProgressHUD *HUD=[MBProgressHUD new];
+    HUD=[MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
+
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

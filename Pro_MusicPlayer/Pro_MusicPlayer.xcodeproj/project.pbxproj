@@ -37,6 +37,9 @@
 		C24963C91BA6B1D300C87E22 /* MusicModle.m in Sources */ = {isa = PBXBuildFile; fileRef = C24963C81BA6B1D300C87E22 /* MusicModle.m */; };
 		C267746B1BA94A3E001F5D9D /* LyriHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C267746A1BA94A3E001F5D9D /* LyriHelper.m */; };
 		C267746E1BA95220001F5D9D /* LyricModle.m in Sources */ = {isa = PBXBuildFile; fileRef = C267746D1BA95220001F5D9D /* LyricModle.m */; };
+		C26774751BA999FA001F5D9D /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = C26774711BA999FA001F5D9D /* MBProgressHUD+MJ.m */; };
+		C26774761BA999FA001F5D9D /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C26774721BA999FA001F5D9D /* MBProgressHUD.bundle */; };
+		C26774771BA999FA001F5D9D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C26774741BA999FA001F5D9D /* MBProgressHUD.m */; };
 		C2CFC9DC1BA7EC9C001697C2 /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CFC9DB1BA7EC9C001697C2 /* AudioPlayer.m */; };
 		C2CFC9DF1BA80A21001697C2 /* MusicPlayingController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CFC9DE1BA80A21001697C2 /* MusicPlayingController.m */; };
 /* End PBXBuildFile section */
@@ -113,6 +116,11 @@
 		C267746A1BA94A3E001F5D9D /* LyriHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LyriHelper.m; sourceTree = "<group>"; };
 		C267746C1BA95220001F5D9D /* LyricModle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LyricModle.h; sourceTree = "<group>"; };
 		C267746D1BA95220001F5D9D /* LyricModle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LyricModle.m; sourceTree = "<group>"; };
+		C26774701BA999FA001F5D9D /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
+		C26774711BA999FA001F5D9D /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
+		C26774721BA999FA001F5D9D /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		C26774731BA999FA001F5D9D /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		C26774741BA999FA001F5D9D /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		C2CFC9DA1BA7EC9C001697C2 /* AudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayer.h; sourceTree = "<group>"; };
 		C2CFC9DB1BA7EC9C001697C2 /* AudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayer.m; sourceTree = "<group>"; };
 		C2CFC9DD1BA80A21001697C2 /* MusicPlayingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicPlayingController.h; sourceTree = "<group>"; };
@@ -302,6 +310,7 @@
 		C24963841BA6A34500C87E22 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				C267746F1BA999FA001F5D9D /* MBProgressHUD */,
 				C24963851BA6A3B600C87E22 /* SDWebImage */,
 			);
 			path = Vendors;
@@ -366,6 +375,18 @@
 			children = (
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		C267746F1BA999FA001F5D9D /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				C26774701BA999FA001F5D9D /* MBProgressHUD+MJ.h */,
+				C26774711BA999FA001F5D9D /* MBProgressHUD+MJ.m */,
+				C26774721BA999FA001F5D9D /* MBProgressHUD.bundle */,
+				C26774731BA999FA001F5D9D /* MBProgressHUD.h */,
+				C26774741BA999FA001F5D9D /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -450,6 +471,7 @@
 			files = (
 				C24963601BA6A13100C87E22 /* Main.storyboard in Resources */,
 				C24963651BA6A13100C87E22 /* LaunchScreen.xib in Resources */,
+				C26774761BA999FA001F5D9D /* MBProgressHUD.bundle in Resources */,
 				C24963C61BA6A6F600C87E22 /* MusicitemCell.xib in Resources */,
 				C24963621BA6A13100C87E22 /* Images.xcassets in Resources */,
 			);
@@ -473,9 +495,11 @@
 				C24963A81BA6A3B600C87E22 /* NSData+ImageContentType.m in Sources */,
 				C24963C11BA6A6CA00C87E22 /* MusicListController.m in Sources */,
 				C2CFC9DF1BA80A21001697C2 /* MusicPlayingController.m in Sources */,
+				C26774751BA999FA001F5D9D /* MBProgressHUD+MJ.m in Sources */,
 				C24963AE1BA6A3B600C87E22 /* SDWebImageManager.m in Sources */,
 				C24963AC1BA6A3B600C87E22 /* SDWebImageDownloader.m in Sources */,
 				C24963B31BA6A3B600C87E22 /* UIImage+WebP.m in Sources */,
+				C26774771BA999FA001F5D9D /* MBProgressHUD.m in Sources */,
 				C24963C51BA6A6F600C87E22 /* MusicitemCell.m in Sources */,
 				C2CFC9DC1BA7EC9C001697C2 /* AudioPlayer.m in Sources */,
 				C24963B61BA6A3B600C87E22 /* UIView+WebCacheOperation.m in Sources */,
