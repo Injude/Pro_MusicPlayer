@@ -14,7 +14,7 @@
 #import "URLs.h"
 #import "MBProgressHUD.h"
 
-@interface MusicListController ()<UIWebViewDelegate>
+@interface MusicListController ()
 //因为播放页面一直存在,所以做成一个属性直接放在列表页面
 @property(nonatomic,strong)MusicPlayingController *playingController;
 
@@ -27,7 +27,7 @@
     
     
     
-    
+   
     
     self.title=@"奈文摩尔";
     [self.tableView registerNib:[UINib nibWithNibName:@"MusicitemCell" bundle:nil] forCellReuseIdentifier:@"cell"];
@@ -35,20 +35,38 @@
     
     [[MusicListHelper shareHelper]requstAllWithMusic:^{
         [self.tableView reloadData];
-        
+
         
     }];
     
     
 }
 
--(void)loadHUD{
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+       [self startHUD];
+
+}
+
+
+-(void)startHUD{
 
     MBProgressHUD *HUD=[MBProgressHUD new];
     HUD=[MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    HUD.color = [UIColor grayColor];
+    HUD.labelText=@"加载中...";
+//    HUD.detailsLabelFont=[UIFont systemFontOfSize:13];
+//    HUD.detailsLabelText=@"请稍等";
+    //HUD.detailsLabelColor=[UIColor grayColor];
+   
+    
     
 
+    [HUD hide:YES afterDelay:1];
+  
 }
+
 
 
 - (void)didReceiveMemoryWarning {
