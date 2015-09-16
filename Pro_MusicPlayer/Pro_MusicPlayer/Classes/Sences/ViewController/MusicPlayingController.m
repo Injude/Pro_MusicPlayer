@@ -11,7 +11,9 @@
 #import "MusicListHelper.h"
 #import "UIImageView+WebCache.h"
 #import "AudioPlayer.h"
-@interface MusicPlayingController ()<AudioPlayerDelegate>
+#import "LyriHelper.h"
+#import "LyricModle.h"
+@interface MusicPlayingController ()<AudioPlayerDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UINavigationBar *navebar;
 
 //当前播放音乐的模型
@@ -28,6 +30,7 @@
 
 @property (weak, nonatomic) IBOutlet UISlider *slider4time;
 
+@property (weak, nonatomic) IBOutlet UITableView *tableview4Lyric;
 
 @end
 
@@ -129,7 +132,11 @@
     self.img4Musicpic.layer.masksToBounds = YES;
     self.img4Musicpic.layer.cornerRadius = 100;
     [self.slider4time addTarget:self action:@selector(timeSliderAction:) forControlEvents:UIControlEventValueChanged];
-
+    self.tableview4Lyric.dataSource=self;
+    
+    //注册cell
+    [self.tableview4Lyric registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -143,15 +150,15 @@
     
     [[AudioPlayer sharedPlayer] setPrepareMusicWithURL:self.currentModel.mp3Url];
     [AudioPlayer sharedPlayer].delegate=self;
-
-
+    [[LyriHelper sharedHelper] initWithLyricString:self.currentModel.lyric];
+    [self.tableview4Lyric reloadData];
 
 }
 
 #pragma mark -私有方法
 -(void )updateUI{
 
-    
+    //显示每首歌上的歌曲名
     for (UINavigationItem *item in self.navebar.items) {
         item.title = self.currentModel.name;
     }
@@ -174,6 +181,28 @@
 
 }
 
+#pragma mark - UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
+    return [LyriHelper sharedHelper].allLyric.count;
+
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    UITableViewCell *cell =[tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+
+    LyricModle *modle=[LyriHelper sharedHelper].allLyric[indexPath.row];
+    cell.textLabel.text = modle.lyric;
+    cell.textLabel.textAlignment=NSTextAlignmentCenter;
+    cell.textLabel.font=[UIFont systemFontOfSize:14];
+    return cell;
+   
+}
+
+
+
+
 #pragma mark -AudioPlayerDelegate
 //回调时间:progress 当前播放的秒数
 
@@ -195,6 +224,15 @@
     self.txt4lasttime.text = [NSString stringWithFormat:@"%d:%d",minutes2,seconds2];
     //更新进度条
     self.slider4time.value = progress;
+    
+    
+    
+    
+    
+    //滑动到哪一行不确定
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[[LyriHelper sharedHelper] indexOfTime:progress] inSection:0];
+    [self.tableview4Lyric selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
 
 }
 

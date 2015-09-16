@@ -35,6 +35,8 @@
 		C24963C51BA6A6F600C87E22 /* MusicitemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C24963C31BA6A6F600C87E22 /* MusicitemCell.m */; };
 		C24963C61BA6A6F600C87E22 /* MusicitemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C24963C41BA6A6F600C87E22 /* MusicitemCell.xib */; };
 		C24963C91BA6B1D300C87E22 /* MusicModle.m in Sources */ = {isa = PBXBuildFile; fileRef = C24963C81BA6B1D300C87E22 /* MusicModle.m */; };
+		C267746B1BA94A3E001F5D9D /* LyriHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C267746A1BA94A3E001F5D9D /* LyriHelper.m */; };
+		C267746E1BA95220001F5D9D /* LyricModle.m in Sources */ = {isa = PBXBuildFile; fileRef = C267746D1BA95220001F5D9D /* LyricModle.m */; };
 		C2CFC9DC1BA7EC9C001697C2 /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CFC9DB1BA7EC9C001697C2 /* AudioPlayer.m */; };
 		C2CFC9DF1BA80A21001697C2 /* MusicPlayingController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CFC9DE1BA80A21001697C2 /* MusicPlayingController.m */; };
 /* End PBXBuildFile section */
@@ -107,6 +109,10 @@
 		C24963C71BA6B1D300C87E22 /* MusicModle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicModle.h; sourceTree = "<group>"; };
 		C24963C81BA6B1D300C87E22 /* MusicModle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicModle.m; sourceTree = "<group>"; };
 		C24963CA1BA6B22000C87E22 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		C26774691BA94A3E001F5D9D /* LyriHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LyriHelper.h; sourceTree = "<group>"; };
+		C267746A1BA94A3E001F5D9D /* LyriHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LyriHelper.m; sourceTree = "<group>"; };
+		C267746C1BA95220001F5D9D /* LyricModle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LyricModle.h; sourceTree = "<group>"; };
+		C267746D1BA95220001F5D9D /* LyricModle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LyricModle.m; sourceTree = "<group>"; };
 		C2CFC9DA1BA7EC9C001697C2 /* AudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayer.h; sourceTree = "<group>"; };
 		C2CFC9DB1BA7EC9C001697C2 /* AudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayer.m; sourceTree = "<group>"; };
 		C2CFC9DD1BA80A21001697C2 /* MusicPlayingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicPlayingController.h; sourceTree = "<group>"; };
@@ -248,6 +254,8 @@
 				C24963BA1BA6A48600C87E22 /* MusicListHelper.m */,
 				C2CFC9DA1BA7EC9C001697C2 /* AudioPlayer.h */,
 				C2CFC9DB1BA7EC9C001697C2 /* AudioPlayer.m */,
+				C26774691BA94A3E001F5D9D /* LyriHelper.h */,
+				C267746A1BA94A3E001F5D9D /* LyriHelper.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -265,6 +273,8 @@
 			children = (
 				C24963C71BA6B1D300C87E22 /* MusicModle.h */,
 				C24963C81BA6B1D300C87E22 /* MusicModle.m */,
+				C267746C1BA95220001F5D9D /* LyricModle.h */,
+				C267746D1BA95220001F5D9D /* LyricModle.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -480,6 +490,8 @@
 				C24963AF1BA6A3B600C87E22 /* SDWebImagePrefetcher.m in Sources */,
 				C24963B51BA6A3B600C87E22 /* UIImageView+WebCache.m in Sources */,
 				C24963AA1BA6A3B600C87E22 /* SDWebImageCompat.m in Sources */,
+				C267746B1BA94A3E001F5D9D /* LyriHelper.m in Sources */,
+				C267746E1BA95220001F5D9D /* LyricModle.m in Sources */,
 				C24963BB1BA6A48600C87E22 /* MusicListHelper.m in Sources */,
 				C24963C91BA6B1D300C87E22 /* MusicModle.m in Sources */,
 				C24963B11BA6A3B600C87E22 /* UIImage+GIF.m in Sources */,
