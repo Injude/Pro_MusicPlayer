@@ -250,6 +250,9 @@
 //重写get方法
 -(MusicModle *)currentModel{
 
+    
+    _index=_currentIndex;
+    
     _currentModel=[[MusicListHelper shareHelper] modleWithIndex:_currentIndex];
     return _currentModel;
 
